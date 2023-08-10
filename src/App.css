@@ -1,0 +1,16 @@
+
+#root {
+  max-width: 1280px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #131518;
+  min-height: 100%;
+
+  display: grid;
+  place-items: center;
+}

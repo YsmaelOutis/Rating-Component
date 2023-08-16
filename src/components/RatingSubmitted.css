@@ -1,6 +1,6 @@
 .rating-submitted-container {
-    height: 416px;
-    width: 412px;
+    height: 410px;
+    width: 400px;
 
     display: flex;
     flex-direction: column;
@@ -9,7 +9,7 @@
 
     position: relative;
     
-    padding: 3rem;
+    padding: 3rem 3rem 1rem 3rem;
 
     border-radius: 1.5%;
     background-image: radial-gradient(98.96% 98.96% at 50.00% 0%, #232A34 0%, #181E27 100%);
@@ -85,4 +85,20 @@
 .rating-submitted-article p {
     line-height: 24px;
     font-size: 18px;
+}
+
+@media (max-width: 500px) {
+    .rating-submitted-container {
+        width: 75%;
+        height: 500px;
+        
+        justify-content: space-around;
+
+        padding: 2rem 2rem 1rem 2rem;
+
+    }
+
+    .rating-info {
+        font-size: 14px;
+    }
 }

@@ -1,22 +1,12 @@
-import { useState } from 'react'
-import { Navigate, useLocation } from 'react-router-dom'
-
 import arrowBack from '../assets/ArrowBack.png'
 
 import './RatingSubmitted.css'
 
-const RatingSubmitted = () => {
-  const location = useLocation()
-  const searchParams = new URLSearchParams(location.search)
-  const rating = searchParams.get('rating')
-
-  const [goBack, setGoBack] = useState(false)
-
+const RatingSubmitted = ({rating, setRatingSubmitted}) => {
   return (
     <div className='rating-submitted-container'>
-        <button className="rating-back-option" onClick={() => setGoBack(true)}>
+        <button className="rating-back-option" onClick={() => setRatingSubmitted(false)}>
           <img src={ arrowBack } alt="" />
-          {goBack && <Navigate to="/" />}
         </button>
         <img src="/RatingSubmittedImage.png" alt="" className='rating-submitted-image'/>
         <p className='rating-info'>You selected {rating} out of 5</p>
